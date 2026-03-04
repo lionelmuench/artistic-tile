@@ -1,0 +1,77 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  isHome?: boolean;
+  isContact?: boolean;
+}
+
+const { title, description, isHome = false, isContact = false } = Astro.props;
+
+// Canonical URL
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://artistictilesetting.com');
+
+// Schema
+const schemaContent = `
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Artistic Tile Setting Inc.",
+  "image": "${new URL('/og-image.jpg', canonicalURL)}",
+  "telephone": "(914) 774-0100",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "94 Davenport Rd",
+    "addressLocality": "Westchester",
+    "addressRegion": "NY",
+    "postalCode": "10710",
+    "addressCountry": "US"
+  },
+  "url": "${canonicalURL}"
+}
+`;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+        <link rel="canonical" href={canonicalURL} />
+		<title>{title}</title>
+        <meta name="description" content={description} />
+        
+        <!-- Google Fonts: Inter -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+        { (isHome || isContact) && (
+            <script type="application/ld+json" set:html={schemaContent} />
+        )}
+	</head>
+	<body class="bg-stone-50 text-slate-900 font-sans antialiased min-h-screen flex flex-col">
+        <!-- GA4 Integration (Placeholder checking PROD) -->
+        { import.meta.env.PROD && import.meta.env.PUBLIC_GA_ID && (
+            <>
+                <script is:inline type="text/partytown" src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.PUBLIC_GA_ID}`}></script>
+                <script is:inline type="text/partytown" define:vars={{ gaId: import.meta.env.PUBLIC_GA_ID }}>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', gaId);
+                </script>
+            </>
+        )}
+		
+        <slot name="header" />
+        <main class="flex-grow">
+            <slot />
+        </main>
+        <slot name="footer" />
+	</body>
+</html>

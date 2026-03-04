@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import MasonryGrid from '../components/MasonryGrid.astro';
+
+// Placeholder portfolio images
+const portfolioImages = [
+  { src: '/images/bathroom_remodel_1772650147926.png', alt: 'Bathroom remodel before and after' },
+  { src: '/images/kitchen_backsplash_1772650160267.png', alt: 'Custom tile kitchen backsplash' },
+  { src: '/images/commercial_tile_1772650187006.png', alt: 'Large scale commercial tile installation' },
+  { src: '/images/tile_maintenance_1772650173757.png', alt: 'Professional grout and tile repair' },
+  { src: '/images/hero_background_1772650134156.png', alt: 'Full modern bathroom remodel with custom tile' },
+  { src: '/images/portfolio_shower_niche_1772650410907.png', alt: 'Custom marble hexagon shower niche' },
+  { src: '/images/portfolio_wood_look_tile_1772650428837.png', alt: 'Wood-look porcelain living room tile' },
+  { src: '/images/portfolio_marble_bathroom_1772650444197.png', alt: 'Luxury Calacatta marble master bathroom' },
+  { src: '/images/portfolio_kitchen_floor_1772650458298.png', alt: 'Staggered slate tile kitchen floor' },
+];
+---
+
+<BaseLayout title="Portfolio & Gallery | Artistic Tile Setting Inc." description="View our recent tile installations, bathroom remodels, and kitchen renovations in Westchester, NY.">
+  <Header slot="header" />
+  
+  <div class="bg-stone-900 pt-32 pb-20 px-4 sm:px-6 lg:px-8 text-center text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#d6d3d1 1px, transparent 1px); background-size: 32px 32px;"></div>
+    <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">Our Portfolio</h1>
+    <div class="h-1 w-20 bg-teal-600 mx-auto rounded-sm mb-6"></div>
+    <p class="text-xl text-stone-300 max-w-2xl mx-auto font-light">A showcase of our recent transforming projects in Westchester County.</p>
+  </div>
+
+  <section class="py-20 bg-stone-50 min-h-[50vh]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <MasonryGrid images={portfolioImages} />
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="py-16 bg-slate-900 border-t-4 border-teal-700 text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-white mb-6">Ready to transform your space?</h2>
+      <a href="/contact" class="inline-block bg-teal-700 hover:bg-teal-600 text-white px-8 py-4 rounded-sm font-bold text-lg transition-colors shadow-lg">
+        Get Your Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

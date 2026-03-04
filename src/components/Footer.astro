@@ -1,0 +1,66 @@
+---
+const currentYear = new Date().getFullYear();
+---
+<footer class="bg-slate-900 border-t-4 border-teal-700 text-stone-300 py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <!-- Brand & About -->
+      <div>
+        <h3 class="text-2xl font-bold text-white tracking-tight mb-4 flex items-center gap-2">
+          <!-- Geometric Tile Icon Minimalized -->
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-teal-600">
+            <rect x="2" y="2" width="9" height="9" fill="currentColor" />
+            <rect x="13" y="13" width="9" height="9" fill="currentColor" />
+          </svg>
+          Artistic Tile <span class="text-teal-600">Setting</span>
+        </h3>
+        <p class="mb-6 leading-relaxed max-w-sm text-stone-400">
+          Family-owned and operated contractor specializing in precision ceramic & porcelain tile, and complete kitchen & bathroom remodels. Over 6 years of expertise.
+        </p>
+        <div class="flex flex-col space-y-2">
+          <a href="tel:9147740100" class="inline-flex items-center text-teal-500 hover:text-white font-semibold transition-colors text-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 mr-2">
+              <path fill-rule="evenodd" d="M2 3.5A1.5 1.5 0 013.5 2h1.148a1.5 1.5 0 011.465 1.175l.716 3.223a1.5 1.5 0 01-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 006.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 011.767-1.052l3.223.716A1.5 1.5 0 0118 15.352V16.5a1.5 1.5 0 01-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 012.43 8.326 13.019 13.019 0 012 5V3.5z" clip-rule="evenodd" />
+            </svg>
+             (914) 774-0100
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-lg font-semibold text-white mb-6 uppercase tracking-wider text-sm">Quick Links</h4>
+        <ul class="space-y-3 font-medium text-stone-400">
+          <li><a href="/" class="hover:text-white transition-colors duration-200">Home</a></li>
+          <li><a href="/services" class="hover:text-white transition-colors duration-200">Our Services</a></li>
+          <li><a href="/portfolio" class="hover:text-white transition-colors duration-200">Portfolio & Gallery</a></li>
+          <li><a href="/about" class="hover:text-white transition-colors duration-200">About Us</a></li>
+          <li><a href="/contact" class="hover:text-white transition-colors duration-200">Contact & Free Estimates</a></li>
+        </ul>
+      </div>
+
+      <!-- Service Area & Contact -->
+      <div>
+        <h4 class="text-lg font-semibold text-white mb-6 uppercase tracking-wider text-sm">Service Area & Location</h4>
+        <address class="not-italic text-stone-400 leading-relaxed mb-4">
+          <strong class="text-stone-300 font-semibold">Artistic Tile Setting Inc.</strong><br />
+          94 Davenport Rd<br />
+          Yonkers, NY 10710
+        </address>
+        <p class="mb-6 text-sm text-stone-500 italic">Serving Yonkers, Westchester County, and surrounding areas. Licensed, Insured, and Bonded.</p>
+        <a href="/contact" class="inline-block bg-slate-800 border border-slate-700 hover:bg-slate-700 text-white px-5 py-2.5 rounded-sm font-semibold transition-colors duration-200 shadow-sm">
+          Request a Free Estimate
+        </a>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center text-sm font-medium">
+      <p class="text-stone-500">&copy; {currentYear} Artistic Tile Setting Inc. All rights reserved.</p>
+      <div class="mt-4 md:mt-0 flex space-x-6 text-stone-500">
+        <a href="/privacy" class="hover:text-stone-300 transition-colors">Privacy Policy</a>
+        <a href="/terms" class="hover:text-stone-300 transition-colors">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,184 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+
+const reviews = [
+  {
+    name: "Robert",
+    location: "Westchester, NY",
+    text: "Unbelievable. Anthony’s attention to detail and quality of work is unmatched. He tiled my bathroom beautifully without delay. During the process he was communicative and nothing short of a gentleman."
+  },
+  {
+    name: "Debbie",
+    location: "Westchester County",
+    text: "I am very pleased with Anthony and his workers at Artistic Tile. Anthony is tops in communication and keeps you posted every step of the way. His crew is wonderful... They do quality work and have a good eye for design."
+  },
+  {
+    name: "Bernard",
+    location: "White Plains, NY",
+    text: "Anthony was excellent; he explained everything so we could understand it, he and his worker showed up when they said, he returned all calls and texts promptly, and they did an excellent job."
+  }
+];
+---
+
+<BaseLayout title="Artistic Tile Setting Inc. | Westchester, NY" description="Expert Tile Installation & Bathroom Remodeling in Westchester, NY. Family-owned and operated contractor." isHome={true}>
+  <Header slot="header" />
+  
+  <Hero />
+
+  <!-- Why Choose Us / Services Preview -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">Craftsmanship You Can Trust</h2>
+        <div class="h-1 w-20 bg-teal-700 mx-auto rounded-sm mb-6"></div>
+        <p class="text-lg text-slate-600 leading-relaxed">
+          With over 6 years of dedicated service in Westchester and surrounding areas, we bring precision, reliability, and unparalleled quality to every project. From simple repairs to complete transformations.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-stone-50 p-8 rounded-sm shadow-sm border border-stone-200 hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-teal-100 text-teal-700 rounded-sm flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.75M5.25 9h3.75m-8.25 2.493V21h7.5" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">Kitchen & Bath Remodels</h3>
+          <p class="text-slate-600 leading-relaxed">Full-scale renovations updating your most valuable spaces with modern fixtures, layout optimization, and flawless finishes.</p>
+        </div>
+
+        <div class="bg-stone-50 p-8 rounded-sm shadow-sm border border-stone-200 hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-teal-100 text-teal-700 rounded-sm flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.315 48.315 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">Custom Tile Installation</h3>
+          <p class="text-slate-600 leading-relaxed">Expert setting of ceramic, porcelain, and natural stone. Backsplashes, floors, and custom shower pans engineered to last.</p>
+        </div>
+
+        <div class="bg-stone-50 p-8 rounded-sm shadow-sm border border-stone-200 hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-teal-100 text-teal-700 rounded-sm flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">Commercial Services</h3>
+          <p class="text-slate-600 leading-relaxed">Durable, high-traffic commercial tile installation and bathroom replacements optimized for your business operations.</p>
+        </div>
+      </div>
+      
+      <div class="mt-12 text-center">
+        <a href="/services" class="inline-flex items-center text-slate-900 font-bold hover:text-teal-700 transition-colors">
+          View All Services 
+          <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 ml-2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- High-level Portfolio Teaser -->
+  <section class="py-20 bg-stone-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div class="max-w-2xl">
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">Recent Work</h2>
+          <div class="h-1 w-20 bg-teal-700 rounded-sm mb-6"></div>
+          <p class="text-lg text-slate-600">A glimpse into our recent tile and remodeling projects.</p>
+        </div>
+        <a href="/portfolio" class="hidden md:inline-flex items-center text-teal-700 font-bold hover:text-teal-800 transition-colors">
+          View Full Gallery
+          <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 ml-2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <!-- Generated Images -->
+        <div class="aspect-square bg-stone-300 rounded-sm overflow-hidden flex items-center justify-center group relative shadow-md">
+            <img src="/images/bathroom_remodel_1772650147926.png" class="absolute inset-0 w-full h-full object-cover z-10 transition-transform duration-700 group-hover:scale-105" alt="Clean newly remodeled bathroom" />
+            <div class="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/20 transition-colors duration-300 z-20"></div>
+        </div>
+        <div class="aspect-square bg-stone-300 rounded-sm overflow-hidden flex items-center justify-center group relative shadow-md">
+            <img src="/images/kitchen_backsplash_1772650160267.png" class="absolute inset-0 w-full h-full object-cover z-10 transition-transform duration-700 group-hover:scale-105" alt="Custom dark geometric tile kitchen backsplash" />
+            <div class="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/20 transition-colors duration-300 z-20"></div>
+        </div>
+        <div class="aspect-square bg-stone-300 rounded-sm overflow-hidden flex items-center justify-center group relative shadow-md">
+            <img src="/images/tile_maintenance_1772650173757.png" class="absolute inset-0 w-full h-full object-cover z-10 transition-transform duration-700 group-hover:scale-105" alt="Professional grout and tile repair" />
+            <div class="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/20 transition-colors duration-300 z-20"></div>
+        </div>
+      </div>
+      
+      <div class="mt-8 text-center md:hidden">
+        <a href="/portfolio" class="inline-flex items-center text-teal-700 font-bold hover:text-teal-800 transition-colors">
+          View Full Gallery
+          <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 ml-2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-24 bg-slate-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 tracking-tight">What Our Neighbors Say</h2>
+        <div class="h-1 w-20 bg-teal-600 mx-auto rounded-sm mb-6"></div>
+        <p class="text-lg text-stone-300 leading-relaxed font-light">
+          Don't just take our word for it. Read what local homeowners have to say about working with Anthony and the team.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {reviews.map(review => (
+          <div class="bg-slate-800 p-8 rounded-sm border-t-4 border-teal-600 shadow-xl relative">
+            <svg class="absolute top-6 right-8 w-8 h-8 text-slate-700 saturate-0" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
+              <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+            </svg>
+            <div class="flex text-teal-500 mb-6 mt-2">
+               {[...Array(5)].map(() => (
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+               ))}
+            </div>
+            <p class="text-stone-300 italic leading-relaxed mb-6 font-light">"{review.text}"</p>
+            <div>
+              <p class="text-white font-bold">{review.name}</p>
+              <p class="text-stone-400 text-sm">{review.location}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-teal-700 text-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight">Ready to Start Your Project?</h2>
+      <p class="text-xl text-teal-100 mb-10 leading-relaxed font-light">
+        Contact us today for a free, no-obligation estimate. We're ready to bring your vision to life with precision and care.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+        <a href="/contact" class="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 rounded-sm font-bold text-lg transition-colors shadow-lg">
+          Request an Estimate
+        </a>
+        <span class="text-teal-200 font-medium">or</span>
+        <a href="tel:9147740100" class="w-full sm:w-auto bg-transparent border-2 border-white hover:bg-white hover:text-teal-800 text-white px-8 py-4 rounded-sm font-bold text-lg transition-colors">
+          Call (914) 774-0100
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

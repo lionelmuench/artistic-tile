@@ -1,0 +1,31 @@
+---
+interface Image {
+  src: string;
+  alt: string;
+}
+
+interface Props {
+  images: Image[];
+}
+
+const { images } = Astro.props;
+---
+<div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+  {images.map((img, index) => (
+    <div class="break-inside-avoid shadow-md rounded-sm overflow-hidden group bg-stone-200">
+      <div class="relative w-full h-0 pb-[100%] overflow-hidden">
+        {/* We use a placeholder div that mimics an image when there is none during layout phase */}
+        <div class="absolute inset-0 bg-stone-300 flex items-center justify-center text-stone-500 font-medium">
+          [Image Placeholder]
+        </div>
+        <img 
+          src={img.src} 
+          alt={img.alt} 
+          loading={index > 4 ? "lazy" : "eager"}
+          class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 z-10"
+          onerror="this.style.display='none'"
+        />
+      </div>
+    </div>
+  ))}
+</div>

@@ -1,0 +1,136 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Our Services | Artistic Tile Setting Inc." description="Comprehensive tile installation, kitchen & bathroom remodeling, and commercial tile services in Westchester, NY.">
+  <Header slot="header" />
+  
+  <div class="bg-stone-900 pt-32 pb-20 px-4 sm:px-6 lg:px-8 text-center text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#d6d3d1 1px, transparent 1px); background-size: 32px 32px;"></div>
+    <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">Our Services</h1>
+    <div class="h-1 w-20 bg-teal-600 mx-auto rounded-sm mb-6"></div>
+    <p class="text-xl text-stone-300 max-w-2xl mx-auto font-light">Precision craftsmanship for residential and commercial spaces.</p>
+  </div>
+
+  <section class="py-20 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+      
+      <!-- Bathroom Remodels -->
+      <div id="bathroom-remodels" class="flex flex-col md:flex-row gap-12 items-center">
+        <div class="w-full md:w-1/2">
+          <div class="aspect-video bg-stone-300 rounded-sm overflow-hidden flex items-center justify-center relative shadow-lg">
+             <img src="/images/bathroom_remodel_1772650147926.png" class="absolute inset-0 w-full h-full object-cover z-10 hover:scale-105 transition-transform duration-700" alt="Newly Remodeled Modern Bathroom with walk-in tile shower" />
+          </div>
+        </div>
+        <div class="w-full md:w-1/2">
+          <h2 class="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+            <svg class="w-8 h-8 text-teal-700" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+               <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.456-2.456L14.25 6l1.035-.259a3.375 3.375 0 002.456-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
+            </svg>
+            Bathroom Remodeling & Tile
+          </h2>
+          <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+            Transform your bathroom into a modern sanctuary. We handle full bathroom renovations from demolition to the final polish. Our waterproofing and setting techniques ensure an installation that prevents leaks and lasts a lifetime.
+          </p>
+          <ul class="space-y-3 font-medium text-slate-700">
+            <li class="flex items-start"><svg class="w-6 h-6 text-teal-700 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Full Bathroom Remodeling</li>
+            <li class="flex items-start"><svg class="w-6 h-6 text-teal-700 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Shower Installation and Replacement</li>
+            <li class="flex items-start"><svg class="w-6 h-6 text-teal-700 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Bathtub Installation and Replacement</li>
+            <li class="flex items-start"><svg class="w-6 h-6 text-teal-700 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Walk-In Tub Installation</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Kitchen Remodels -->
+      <div id="kitchen-remodels" class="flex flex-col md:flex-row-reverse gap-12 items-center">
+        <div class="w-full md:w-1/2">
+          <div class="aspect-video bg-stone-300 rounded-sm overflow-hidden flex items-center justify-center relative shadow-lg">
+             <img src="/images/kitchen_backsplash_1772650160267.png" class="absolute inset-0 w-full h-full object-cover z-10 hover:scale-105 transition-transform duration-700" alt="Custom dark geometric tile kitchen backsplash" />
+          </div>
+        </div>
+        <div class="w-full md:w-1/2">
+          <h2 class="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+             <svg class="w-8 h-8 text-teal-700" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+               <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+            </svg>
+            Kitchen Remodeling & Backsplashes
+          </h2>
+          <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+            The kitchen is the heart of your home. We specialize in stunning kitchen renovations, focusing on beautiful, durable floor tiles and meticulous backsplash installations that tie your interior design together.
+          </p>
+          <ul class="space-y-3 font-medium text-slate-700">
+            <li class="flex items-start"><svg class="w-6 h-6 text-teal-700 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Complete Kitchen Remodeling</li>
+            <li class="flex items-start"><svg class="w-6 h-6 text-teal-700 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Precision Backsplash Installation</li>
+            <li class="flex items-start"><svg class="w-6 h-6 text-teal-700 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Ceramic and Porcelain Floor Tiling</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Tile Maintenance & Repair -->
+      <div id="tile-repair" class="flex flex-col md:flex-row gap-12 items-center">
+        <div class="w-full md:w-1/2">
+          <div class="aspect-video bg-stone-300 rounded-sm overflow-hidden flex items-center justify-center relative shadow-lg">
+             <img src="/images/tile_maintenance_1772650173757.png" class="absolute inset-0 w-full h-full object-cover z-10 hover:scale-105 transition-transform duration-700" alt="Contractor applying fresh bright white grout to slate gray tile floor" />
+          </div>
+        </div>
+        <div class="w-full md:w-1/2">
+          <h2 class="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+             <svg class="w-8 h-8 text-teal-700" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+               <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.83-5.877M11.42 15.17l-.82-1.722L12 12m-1.42 3.17l-3.21-1.53c-.328-.156-.475-.544-.319-.877l1.096-2.316-2.193-2.193-2.316 1.096c-.333.156-.721.01-.877-.319l-1.53-3.21 4.57 4.57ZM3 17.25l1.9-4.015-1.9-4.015L3.922 8.3m0 0l-1.68 3.56c-.156.333.01.721.319.877l4.135 1.97M18 6.75a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+            </svg>
+            Tile & Grout Repair
+          </h2>
+          <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+            Don't let cracked tiles or deteriorating grout ruin the look of your space. We offer comprehensive restoration services to breathe new life into your existing tile installations, making them look brand new again.
+          </p>
+          <ul class="space-y-3 font-medium text-slate-700">
+            <li class="flex items-start"><svg class="w-6 h-6 text-teal-700 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Grout Replace or Repair</li>
+            <li class="flex items-start"><svg class="w-6 h-6 text-teal-700 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Ceramic and Porcelain Tile Repair</li>
+            <li class="flex items-start"><svg class="w-6 h-6 text-teal-700 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Tile, Stone, Marble - Clean, Grout, Polish and Maintain</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Commercial Services -->
+      <div id="commercial" class="flex flex-col md:flex-row-reverse gap-12 items-center">
+        <div class="w-full md:w-1/2">
+          <div class="aspect-video bg-stone-300 rounded-sm overflow-hidden flex items-center justify-center relative shadow-lg">
+             <img src="/images/commercial_tile_1772650187006.png" class="absolute inset-0 w-full h-full object-cover z-10 hover:scale-105 transition-transform duration-700" alt="Large scale commercial kitchen with durable porcelain floor tiles" />
+          </div>
+        </div>
+        <div class="w-full md:w-1/2">
+          <h2 class="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+             <svg class="w-8 h-8 text-teal-700" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
+            </svg>
+            Commercial Tile & Remodeling
+          </h2>
+          <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+            We provide robust, high-performance tile solutions built to withstand heavy foot traffic and rigorous commercial use. We understand business timelines and work efficiently to minimize operational downtime.
+          </p>
+          <ul class="space-y-3 font-medium text-slate-700">
+            <li class="flex items-start"><svg class="w-6 h-6 text-teal-700 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Commercial Kitchen Remodeling</li>
+            <li class="flex items-start"><svg class="w-6 h-6 text-teal-700 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Commercial Bathroom Remodeling</li>
+            <li class="flex items-start"><svg class="w-6 h-6 text-teal-700 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Bathtub/Shower Install & Replace for Business</li>
+            <li class="flex items-start"><svg class="w-6 h-6 text-teal-700 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Tile & Grout Cleaning & Repair for Business</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="py-16 bg-slate-900 border-t-4 border-teal-700 text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-white mb-6">Need a reliable tile contractor?</h2>
+      <a href="/contact" class="inline-block bg-teal-700 hover:bg-teal-600 text-white px-8 py-4 rounded-sm font-bold text-lg transition-colors shadow-lg">
+        Schedule a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>
