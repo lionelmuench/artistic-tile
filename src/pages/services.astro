@@ -1,4 +1,9 @@
 ---
+import { Image } from 'astro:assets';
+import bathroomImg from '../assets/images/bathroom_remodel_1772650147926.png';
+import kitchenImg from '../assets/images/kitchen_backsplash_1772650160267.png';
+import tileRepairImg from '../assets/images/tile_maintenance_1772650173757.png';
+import commercialImg from '../assets/images/commercial_tile_1772650187006.png';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -21,7 +26,7 @@ import Footer from '../components/Footer.astro';
       <div id="bathroom-remodels" class="flex flex-col md:flex-row gap-12 items-center">
         <div class="w-full md:w-1/2">
           <div class="aspect-video bg-stone-300 rounded-sm overflow-hidden flex items-center justify-center relative shadow-lg">
-             <img src="/images/bathroom_remodel_1772650147926.png" class="absolute inset-0 w-full h-full object-cover z-10 hover:scale-105 transition-transform duration-700" alt="Newly Remodeled Modern Bathroom with walk-in tile shower" />
+             <Image src={bathroomImg} class="absolute inset-0 w-full h-full object-cover z-10 hover:scale-105 transition-transform duration-700" alt="Newly Remodeled Modern Bathroom with walk-in tile shower" />
           </div>
         </div>
         <div class="w-full md:w-1/2">
@@ -47,7 +52,7 @@ import Footer from '../components/Footer.astro';
       <div id="kitchen-remodels" class="flex flex-col md:flex-row-reverse gap-12 items-center">
         <div class="w-full md:w-1/2">
           <div class="aspect-video bg-stone-300 rounded-sm overflow-hidden flex items-center justify-center relative shadow-lg">
-             <img src="/images/kitchen_backsplash_1772650160267.png" class="absolute inset-0 w-full h-full object-cover z-10 hover:scale-105 transition-transform duration-700" alt="Custom dark geometric tile kitchen backsplash" />
+             <Image src={kitchenImg} class="absolute inset-0 w-full h-full object-cover z-10 hover:scale-105 transition-transform duration-700" alt="Custom dark geometric tile kitchen backsplash" />
           </div>
         </div>
         <div class="w-full md:w-1/2">
@@ -72,7 +77,7 @@ import Footer from '../components/Footer.astro';
       <div id="tile-repair" class="flex flex-col md:flex-row gap-12 items-center">
         <div class="w-full md:w-1/2">
           <div class="aspect-video bg-stone-300 rounded-sm overflow-hidden flex items-center justify-center relative shadow-lg">
-             <img src="/images/tile_maintenance_1772650173757.png" class="absolute inset-0 w-full h-full object-cover z-10 hover:scale-105 transition-transform duration-700" alt="Contractor applying fresh bright white grout to slate gray tile floor" />
+             <Image src={tileRepairImg} class="absolute inset-0 w-full h-full object-cover z-10 hover:scale-105 transition-transform duration-700" alt="Contractor applying fresh bright white grout to slate gray tile floor" />
           </div>
         </div>
         <div class="w-full md:w-1/2">
@@ -97,7 +102,7 @@ import Footer from '../components/Footer.astro';
       <div id="commercial" class="flex flex-col md:flex-row-reverse gap-12 items-center">
         <div class="w-full md:w-1/2">
           <div class="aspect-video bg-stone-300 rounded-sm overflow-hidden flex items-center justify-center relative shadow-lg">
-             <img src="/images/commercial_tile_1772650187006.png" class="absolute inset-0 w-full h-full object-cover z-10 hover:scale-105 transition-transform duration-700" alt="Large scale commercial kitchen with durable porcelain floor tiles" />
+             <Image src={commercialImg} class="absolute inset-0 w-full h-full object-cover z-10 hover:scale-105 transition-transform duration-700" alt="Large scale commercial kitchen with durable porcelain floor tiles" />
           </div>
         </div>
         <div class="w-full md:w-1/2">

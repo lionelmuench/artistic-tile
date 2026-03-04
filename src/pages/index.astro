@@ -1,4 +1,8 @@
 ---
+import { Image } from 'astro:assets';
+import bathroomImg from '../assets/images/bathroom_remodel_1772650147926.png';
+import kitchenImg from '../assets/images/kitchen_backsplash_1772650160267.png';
+import tileRepairImg from '../assets/images/tile_maintenance_1772650173757.png';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -102,15 +106,15 @@ const reviews = [
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
         <!-- Generated Images -->
         <div class="aspect-square bg-stone-300 rounded-sm overflow-hidden flex items-center justify-center group relative shadow-md">
-            <img src="/images/bathroom_remodel_1772650147926.png" class="absolute inset-0 w-full h-full object-cover z-10 transition-transform duration-700 group-hover:scale-105" alt="Clean newly remodeled bathroom" />
+            <Image src={bathroomImg} class="absolute inset-0 w-full h-full object-cover z-10 transition-transform duration-700 group-hover:scale-105" alt="Clean newly remodeled bathroom" />
             <div class="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/20 transition-colors duration-300 z-20"></div>
         </div>
         <div class="aspect-square bg-stone-300 rounded-sm overflow-hidden flex items-center justify-center group relative shadow-md">
-            <img src="/images/kitchen_backsplash_1772650160267.png" class="absolute inset-0 w-full h-full object-cover z-10 transition-transform duration-700 group-hover:scale-105" alt="Custom dark geometric tile kitchen backsplash" />
+            <Image src={kitchenImg} class="absolute inset-0 w-full h-full object-cover z-10 transition-transform duration-700 group-hover:scale-105" alt="Custom dark geometric tile kitchen backsplash" />
             <div class="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/20 transition-colors duration-300 z-20"></div>
         </div>
         <div class="aspect-square bg-stone-300 rounded-sm overflow-hidden flex items-center justify-center group relative shadow-md">
-            <img src="/images/tile_maintenance_1772650173757.png" class="absolute inset-0 w-full h-full object-cover z-10 transition-transform duration-700 group-hover:scale-105" alt="Professional grout and tile repair" />
+            <Image src={tileRepairImg} class="absolute inset-0 w-full h-full object-cover z-10 transition-transform duration-700 group-hover:scale-105" alt="Professional grout and tile repair" />
             <div class="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/20 transition-colors duration-300 z-20"></div>
         </div>
       </div>
